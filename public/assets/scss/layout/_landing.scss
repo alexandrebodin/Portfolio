@@ -29,3 +29,23 @@
         border: 10px solid rgba(255, 255, 255, 0.3);
     }
 }
+
+.landing-content{
+    position: absolute;
+    top: 30%;
+    margin-top: -$h1-size;
+    left: 20%;
+    margin-left: $profile-picture-size;
+
+    h1{
+        font-weight: 400;
+        margin: 0;
+        font-size: $h1-size;
+    }
+
+    p{
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
+
+}

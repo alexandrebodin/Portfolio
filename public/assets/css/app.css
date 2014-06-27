@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:200,400,700);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1172,10 +1172,13 @@ select {
     right: 91.6666666667%;
     left: auto; } }
 
+body {
+  font-family: 'Josefin Sans', 'sans-serif';
+  color: white; }
+
 a {
   text-decoration: none;
   color: white;
-  font-family: 'Josefin Sans';
   font-weight: 700;
   letter-spacing: 1px; }
 
@@ -1240,6 +1243,20 @@ header.navbar.top {
     height: 16rem;
     border-radius: 8rem;
     border: 10px solid rgba(255, 255, 255, 0.3); }
+
+.landing-content {
+  position: absolute;
+  top: 30%;
+  margin-top: -3rem;
+  left: 20%;
+  margin-left: 16rem; }
+  .landing-content h1 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 3rem; }
+  .landing-content p {
+    margin-left: 2rem;
+    font-size: 2rem; }
 
 .wrapper {
   position: relative; }

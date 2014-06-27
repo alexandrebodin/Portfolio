@@ -12,10 +12,15 @@
             <section class="landing-home">
             <div class="landing-overlay">
                 <div class="profile-picture">
-                    <div class="profile-picture-link">
+                    <a class="profile-picture-link">
                         {{ HTML::image('assets/images/profile-photo.jpeg', 'profile_picture' , array('class' => 'profile-img')) }}
-                    </div>
-                <div>
+                    </a>
+                </div>
+                <div class="landing-content">
+                    <h1>Alexandre BODIN</h1>
+                    <p>{{ trans('messages.profesionnal-status') }}</p>
+                    <p>{{ trans('messages.landing-message') }}</p>
+                </div>
             </div>
             </section>
             <section class="main-content">

@@ -1,7 +1,12 @@
+body{
+    font-family: $main-font, 'sans-serif';
+    color: white;
+    
+}
+
 a{
     text-decoration: none;
     color: white;
-    font-family: $main-font;
     font-weight: 700;
     letter-spacing: 1px;
 }
