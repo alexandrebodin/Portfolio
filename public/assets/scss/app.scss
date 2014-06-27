@@ -1,8 +1,11 @@
 @charset "UTF-8";
 @import "vendor/foundation/normalize";
-@import "vendor/foundation/foundation";
 @import "vendor/foundation/foundation/settings";
+@import "vendor/foundation/foundation";
+
 
 @import "vars";
+@import "fonts";
+@import "default";
 
 @import "layout/layout";

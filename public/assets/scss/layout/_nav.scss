@@ -1,5 +1,46 @@
-.navbar.top {
+header.navbar.top {
     height: $nav-height;
     position: fixed;
     top: 0;
+    width: 100%;
+
+    .row{
+        height: $nav-height;
+        line-height: $nav-height;
+    }
+
+    nav.top-nav{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+
+        a{
+            height: 100%;
+            position: relative;
+            text-transform: uppercase;
+            margin-left: 3rem;
+            margin-top: 2rem;
+            display: inline-block;
+
+            .nav-link{
+                position: relative;
+                margin-top: 2rem;
+            }
+
+            svg{
+                position: absolute;
+                left: 50%;
+                top: 0.5rem;
+                margin-left: -12px;
+                width: 25.5px;
+                height: 20px;
+                fill: rgba(255, 255, 255, 0.4);
+            }
+
+            &.active svg{
+                fill: white;
+            }
+        }
+    }
 }
