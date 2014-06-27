@@ -1,0 +1,10 @@
+@import "layout/nav";
+
+section{
+    min-height: 10rem;
+}
+
+section:nth-child(2n)
+{
+    background-color: rgba(0,0,0,0.4);
+}
