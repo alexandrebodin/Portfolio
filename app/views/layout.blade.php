@@ -10,7 +10,11 @@
         @include('header')
         <section class="wrapper">
             <section class="landing-home">
-
+            <div class="profile-picture">
+                <a class="profile-picture-link">
+                    {{ HTML::image('assets/images/profile-photo.jpeg', 'profile_picture' , array('class' => 'profile-img')) }}
+                </a>
+            <div>
             </section>
             <section class="main-content">
                 <section class="who-i-am">

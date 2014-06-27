@@ -1,4 +1,5 @@
 .landing-home{
+
     background-image: url("../images/landing_bg.jpeg");
     background-size: cover;
     background-position: center center;
@@ -7,4 +8,19 @@
     left: 0;
     width: 100%;
     z-index: -1;
+}
+
+.profile-picture{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+
+    .profile-img{
+        width: $profile-picture-size;
+        height: $profile-picture-size;
+        mask: url('../svg/circle-mask.svg#mask');
+        mask-size: $profile-picture-size $profile-picture-size;
+        -webkit-mask-size: $profile-picture-size $profile-picture-size;
+        -webkit-mask-image: url('../svg/circle-mask.svg#mask');
+    }
 }

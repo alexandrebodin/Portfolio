@@ -1191,7 +1191,8 @@ header.navbar.top {
     position: relative;
     display: inline-block;
     width: 100%;
-    text-align: right; }
+    text-align: right;
+    padding-right: 3rem; }
     header.navbar.top nav.top-nav a {
       height: 100%;
       position: relative;
@@ -1223,6 +1224,18 @@ header.navbar.top {
   left: 0;
   width: 100%;
   z-index: -1; }
+
+.profile-picture {
+  position: absolute;
+  top: 30%;
+  left: 20%; }
+  .profile-picture .profile-img {
+    width: 16rem;
+    height: 16rem;
+    mask: url('../svg/circle-mask.svg#mask');
+    mask-size: 16rem 16rem;
+    -webkit-mask-size: 16rem 16rem;
+    -webkit-mask-image: url('../svg/circle-mask.svg#mask'); }
 
 .wrapper {
   position: relative; }
