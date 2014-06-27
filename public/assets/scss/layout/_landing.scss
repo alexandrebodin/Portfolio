@@ -2,12 +2,19 @@
 
     background-image: url("../images/landing_bg.jpeg");
     background-size: cover;
-    background-position: center center;
+
+    background-position: center center, center center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: -1;
+}
+
+.landing-overlay{
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%,rgba(46, 49, 146, 0.4) 100%);
+    width: 100%;
+    height: 100%;
 }
 
 .profile-picture{
@@ -18,9 +25,7 @@
     .profile-img{
         width: $profile-picture-size;
         height: $profile-picture-size;
-        mask: url('../svg/circle-mask.svg#mask');
-        mask-size: $profile-picture-size $profile-picture-size;
-        -webkit-mask-size: $profile-picture-size $profile-picture-size;
-        -webkit-mask-image: url('../svg/circle-mask.svg#mask');
+        border-radius: $profile-picture-size/2;
+        border: 10px solid rgba(255, 255, 255, 0.3);
     }
 }
