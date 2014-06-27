@@ -1,10 +1,20 @@
 @import "layout/nav";
+@import "layout/landing";
 
-section{
-    min-height: 10rem;
+.wrapper{
+    position: relative;
+
+    .main-content{
+        position: relative;
+
+        section{
+            min-height: 50rem;
+        }
+
+        section:nth-child(odd)
+        {
+            background-color: rgba(255,255,255,0.4);
+        }
+    }
 }
 
-section:nth-child(2n)
-{
-    background-color: rgba(0,0,0,0.4);
-}

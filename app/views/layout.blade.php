@@ -10,26 +10,34 @@
         @include('header')
         <section class="wrapper">
             <section class="landing-home">
+
             </section>
-            <section class="who-i-am">
+            <section class="main-content">
+                <section class="who-i-am">
+                </section>
+                <section class="what-i-do">
+                </section>
+                <section class="my-work">
+                </section>
+                <section class="contact-me">
+                    <from>
+                        <fieldset>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="contact[email]">
+                        </fieldset>
+                        <fieldset>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="contact[email]">
+                        </fieldset>
+                    </from>
+                </section>
             </section>
-            <section class="what-i-do">
-            </section>
-            <section class="my-work">
-            </section>
-            <section class="contact-me">
-                <from>
-                    <fieldset>
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="contact[email]">
-                    </fieldset>
-                    <fieldset>
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="contact[email]">    
-                    </fieldset>                
-                </from>
-            </section>
-        </section>       
-        @include('footer') 
+        </section>
+        @include('footer')
+
+        @section('scripts')
+            {{ HTML::script('assets/js/vendor/jquery.min.js') }}
+            {{ HTML::script('assets/js/app.min.js') }}
+        @show
     </body>
 </html>

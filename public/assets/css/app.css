@@ -1172,13 +1172,25 @@ select {
     left: auto; } }
 
 .navbar.top {
-  height: 5rem; }
+  height: 5rem;
+  position: fixed;
+  top: 0; }
 
-.navbar.top {
-  height: 5rem; }
+.landing-home {
+  background-image: url("../images/landing_bg.jpeg");
+  -webkit-background-size: cover cover;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
 
-section {
-  min-height: 10rem; }
-
-section:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.4); }
+.wrapper {
+  position: relative; }
+  .wrapper .main-content {
+    position: relative; }
+    .wrapper .main-content section {
+      min-height: 50rem; }
+    .wrapper .main-content section:nth-child(odd) {
+      background-color: rgba(255, 255, 255, 0.4); }

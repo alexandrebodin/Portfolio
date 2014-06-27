@@ -6,7 +6,7 @@
                 {{ trans('messages.whoiam') }}
             </a>
             <a href="#whatido">
-                {{ HTML::navSvgIcon('what-i-do')}}    
+                {{ HTML::navSvgIcon('what-i-do')}}
                 {{ trans('messages.whatido') }}
             </a>
             <a href="#mywork">
