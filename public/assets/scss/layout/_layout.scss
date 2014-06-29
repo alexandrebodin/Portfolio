@@ -8,12 +8,8 @@
         position: relative;
 
         section{
+            background-color: white;
             min-height: 50rem;
-        }
-
-        section:nth-child(odd)
-        {
-            background-color: rgba(255,255,255,0.4);
         }
     }
 }

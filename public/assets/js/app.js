@@ -1,6 +1,9 @@
 var sp4c3B1rd = (function () {
     "use strict";
 
+    var conf = {
+        navHeight: '80px'
+    }
     var landing = (function () {
 
         function resizeLanding() {
@@ -18,8 +21,18 @@ var sp4c3B1rd = (function () {
             $(window).resize(resizeLanding);
         }
 
+        function scrollLanding() {
+            console.log('scroll');
+            $('html, body').animate({ scrollTop: $('.main-content').offset().top}, "slow");
+        }
+
+        function bind() {
+            $('.landing-arrows').click(scrollLanding);
+        }
+
         function initFunction() {
             resize();
+            bind();
         }
 
         return {
@@ -28,7 +41,27 @@ var sp4c3B1rd = (function () {
 
     }());
 
-    var sections = [landing];
+    var nav = (function () {
+
+        function waypoints() {
+            $(".main-content").waypoint(function(){
+                console.log('c');
+                $('.navbar.top').toggleClass("background-on");
+            }, {offset : conf.navHeight} );
+        }
+
+        function initFunction() {
+            console.log('c');
+            waypoints();
+        }
+
+        return {
+            init: initFunction
+        };
+
+    }());
+
+    var sections = [landing, nav];
 
     function init() {
         var i;

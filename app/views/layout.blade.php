@@ -22,6 +22,11 @@
                     <p>{{ trans('messages.landing-message') }}</p>
                 </div>
             </div>
+            <div class="landing-arrows">
+                <svg width="21.18px" height="20.78px" viewBox="0 0 21.18 20.78">
+                    <use xlink:href="#arrows"></use>
+                </svg>
+            </div>
             </section>
             <section class="main-content">
                 <section class="who-i-am">
@@ -48,6 +53,7 @@
 
         @section('scripts')
             {{ HTML::script('assets/js/vendor/jquery.min.js') }}
+            {{ HTML::script('assets/js/vendor/waypoints.min.js') }}
             {{ HTML::script('assets/js/app.min.js') }}
         @show
     </body>

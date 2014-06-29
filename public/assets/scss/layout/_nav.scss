@@ -1,8 +1,18 @@
 header.navbar.top {
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
     height: $nav-height;
     position: fixed;
     top: 0;
     width: 100%;
+
+    &.background-on{
+        background-color: #726A98;
+        height: $nav-height + 0.5rem;
+        nav.top-nav a{
+            margin-top: 1.5rem;
+        }
+    }
 
     .row{
         height: $nav-height;
@@ -17,11 +27,12 @@ header.navbar.top {
         padding-right: 3rem;
 
         a{
+            transition: all 0.5s ease-in-out;
             height: 100%;
             position: relative;
             text-transform: uppercase;
             margin-left: 3rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
             display: inline-block;
 
             .nav-link{
@@ -45,3 +56,4 @@ header.navbar.top {
         }
     }
 }
+

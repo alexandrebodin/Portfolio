@@ -32,3 +32,10 @@
     c0-0.19-0.02-0.38-0.05-0.56C1.61,12.95,0,10.67,0,8.12C0,3.64,4.97,0,11.11,0z"/>
 </g>
 </svg>
+<svg display="none" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="21.18px" height="20.78px" viewBox="0 0 21.18 20.78" enable-background="new 0 0 21.18 20.78" xml:space="preserve">
+<g id="arrows" >
+    <polygon points="0,10.45 10.74,20.78 21.18,10.43 18.78,8.02 10.7,16.04 2.35,8    "/>
+    <polygon points="0,2.45 10.74,12.78 21.18,2.43 18.78,0.02 10.7,8.04 2.35,0   "/>
+</g>
+</svg>
