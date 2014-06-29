@@ -1193,7 +1193,9 @@ header.navbar.top {
   width: 100%; }
   header.navbar.top.background-on {
     background-color: #726A98;
-    height: 5.5rem; }
+    height: 5.5rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 2px; }
     header.navbar.top.background-on nav.top-nav a {
       margin-top: 1.5rem; }
   header.navbar.top .row {
