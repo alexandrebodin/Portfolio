@@ -5,4 +5,5 @@ return array(
     'whatido' => 'Ce que je fais',
     'mywork' => 'Mon travail',
     'contactme' => 'Me contacter',
+    'profesionnal-status' => 'Développeur web back & front end'
 );

@@ -3,19 +3,19 @@
         <nav class="top-nav">
             <a href="#whoiam">
                 {{ HTML::navSvgIcon('who-i-am')}}
-                {{ trans('messages.whoiam') }}
+                <span class="nav-link">{{ trans('messages.whoiam') }}</span>
             </a>
             <a href="#whatido">
-                {{ HTML::navSvgIcon('what-i-do')}}    
-                {{ trans('messages.whatido') }}
+                {{ HTML::navSvgIcon('what-i-do')}}
+                <span class="nav-link">{{ trans('messages.whatido') }}</span>
             </a>
             <a href="#mywork">
                 {{ HTML::navSvgIcon('my-work')}}
-                {{ trans('messages.mywork') }}
+                <span class="nav-link">{{ trans('messages.mywork') }}</span>
             </a>
             <a href="#contactme">
                 {{ HTML::navSvgIcon('contact-me')}}
-                {{ trans('messages.contactme') }}
+                <span class="nav-link">{{ trans('messages.contactme') }}</span>
             </a>
         </nav>
     </div>

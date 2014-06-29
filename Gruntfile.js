@@ -4,12 +4,13 @@ module.exports = function(grunt) {
         webDir      : "public/assets/",
         scssDir     : "scss/",
         cssDir      : "css/",
+        jsDir       : "js/"
     };
 
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
+
         // Automatically run a task when a file changes
         watch: {
             css: {
@@ -19,10 +20,16 @@ module.exports = function(grunt) {
                     cwd: conf.webDir+conf.scssDir,
                     livereload: true,
                 },
-
             },
+            js: {
+                files: ["**/*.js", "!**/*.min.js"],
+                tasks: ['jsroutine'],
+                options: {
+                    cwd: conf.webDir+conf.jsDir,
+                    livereload: true,
+                },
+            }
         },
-
 
         //Compile specified SASS files
         sass: {
@@ -34,7 +41,7 @@ module.exports = function(grunt) {
                     dest: conf.webDir+conf.cssDir,
                     ext: '.css'
                 }],
-                options: {                   
+                options: {
                     includePaths: [
                         conf.webDir+conf.scssDir
                     ]
@@ -54,6 +61,19 @@ module.exports = function(grunt) {
             }
         },
 
+        // UglifyJS
+        uglify: {
+            minify: {
+                files: [{
+                    expand: true,
+                    cwd: conf.webDir+conf.jsDir,
+                    src: ['**/*.js', '!**/*.min.js', '!**/*.mix.js' , '!vendor/*'],
+                    dest: conf.webDir+conf.jsDir,
+                    ext: '.min.js'
+                }],
+            },
+        },
+
         //Prefix CSS3 properties
         autoprefixer: {
             no_dest: {
@@ -66,12 +86,14 @@ module.exports = function(grunt) {
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-newer');
 
     // Default task(s).
     grunt.registerTask('cssroutine', ['sass:css', 'newer:autoprefixer', 'newer:cssmin']);
-    grunt.registerTask('default', ['cssroutine']);
+    grunt.registerTask('jsroutine', ['uglify']);
+    grunt.registerTask('default', ['cssroutine' , 'jsroutine']);
 
 };

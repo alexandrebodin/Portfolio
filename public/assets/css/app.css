@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:200,400,700);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -420,7 +421,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem; }
+  max-width: 90rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -1171,14 +1172,115 @@ select {
     right: 91.6666666667%;
     left: auto; } }
 
-.navbar.top {
-  height: 5rem; }
+body {
+  font-family: 'Josefin Sans', 'sans-serif';
+  color: white; }
 
-.navbar.top {
-  height: 5rem; }
+a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px; }
 
-section {
-  min-height: 10rem; }
+header.navbar.top {
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  header.navbar.top.background-on {
+    background-color: #726A98;
+    height: 5.5rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 2px; }
+    header.navbar.top.background-on nav.top-nav a {
+      margin-top: 1.5rem; }
+  header.navbar.top .row {
+    height: 5rem;
+    line-height: 5rem; }
+  header.navbar.top nav.top-nav {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    padding-right: 3rem; }
+    header.navbar.top nav.top-nav a {
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      height: 100%;
+      position: relative;
+      text-transform: uppercase;
+      margin-left: 3rem;
+      margin-top: 1rem;
+      display: inline-block; }
+      header.navbar.top nav.top-nav a .nav-link {
+        position: relative;
+        margin-top: 2rem; }
+      header.navbar.top nav.top-nav a svg {
+        position: absolute;
+        left: 50%;
+        top: 0.5rem;
+        margin-left: -12px;
+        width: 25.5px;
+        height: 20px;
+        fill: rgba(255, 255, 255, 0.4); }
+      header.navbar.top nav.top-nav a.active svg {
+        fill: white; }
 
-section:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.4); }
+.landing-home {
+  background-image: url("../images/landing_bg.jpeg");
+  -webkit-background-size: cover cover;
+  background-size: cover;
+  background-position: center center, center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; }
+  .landing-home .landing-overlay {
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.2) 0%, rgba(46, 49, 146, 0.4) 100%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.2) 0%, rgba(46, 49, 146, 0.4) 100%);
+    width: 100%;
+    height: 100%; }
+  .landing-home .profile-picture {
+    position: absolute;
+    top: 30%;
+    left: 20%; }
+    .landing-home .profile-picture .profile-img {
+      width: 16rem;
+      height: 16rem;
+      border-radius: 8rem;
+      border: 10px solid rgba(255, 255, 255, 0.3); }
+  .landing-home .landing-content {
+    position: absolute;
+    top: 30%;
+    margin-top: -2rem;
+    left: 20%;
+    margin-left: 16rem; }
+    .landing-home .landing-content h1 {
+      font-weight: 400;
+      margin: 0;
+      font-size: 2rem; }
+    .landing-home .landing-content p {
+      font-weight: 200;
+      margin-left: 2rem;
+      font-size: 1.5rem; }
+  .landing-home .landing-arrows {
+    position: absolute;
+    margin-left: -11px;
+    left: 50%;
+    bottom: 2rem;
+    fill: white;
+    opacity: 0.3;
+    cursor: pointer; }
+
+.wrapper {
+  position: relative; }
+  .wrapper .main-content {
+    position: relative; }
+    .wrapper .main-content section {
+      background-color: white;
+      min-height: 50rem; }

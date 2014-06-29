@@ -1,3 +1,60 @@
-.navbar.top {
-    height: $nav-height;   
+header.navbar.top {
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    height: $nav-height;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &.background-on{
+        background-color: #726A98;
+        height: $nav-height + 0.5rem;
+        box-shadow: rgba(0,0,0,.1) 0px 5px 2px;
+        nav.top-nav a{
+            margin-top: 1.5rem;
+        }
+    }
+
+    .row{
+        height: $nav-height;
+        line-height: $nav-height;
+    }
+
+    nav.top-nav{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+        padding-right: 3rem;
+
+        a{
+            transition: all 0.5s ease-in-out;
+            height: 100%;
+            position: relative;
+            text-transform: uppercase;
+            margin-left: 3rem;
+            margin-top: 1rem;
+            display: inline-block;
+
+            .nav-link{
+                position: relative;
+                margin-top: 2rem;
+            }
+
+            svg{
+                position: absolute;
+                left: 50%;
+                top: 0.5rem;
+                margin-left: -12px;
+                width: 25.5px;
+                height: 20px;
+                fill: rgba(255, 255, 255, 0.4);
+            }
+
+            &.active svg{
+                fill: white;
+            }
+        }
+    }
 }
+
