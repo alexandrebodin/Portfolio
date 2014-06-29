@@ -1,5 +1,6 @@
 @import "nav";
 @import "landing";
+@import "whoiam";
 
 .wrapper{
     position: relative;
@@ -8,8 +9,9 @@
         position: relative;
 
         section{
+            padding: 2rem 0;
             background-color: white;
-            min-height: 50rem;
+            min-height: 20rem;
         }
     }
 }

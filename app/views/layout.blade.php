@@ -29,13 +29,25 @@
             </div>
             </section>
             <section class="main-content">
-                <section class="who-i-am">
+                <section id="whoiam">
+                    <div class="row">
+                        <header>
+                            <svg width="82.15px" height="82.4px" viewBox="0 0 82.15 82.4" class="svg-header" data-url="who-i-am" ></svg>
+                            <h2>{{ trans('messages.whoiam') }}</h2>
+                        </header>
+                        <section class="content">
+                            <div class="large-6 small-12 columns left">
+                            </div>
+                            <div class="large-6 small-12 columns right">
+                            </div>
+                        </section>
+                    </div>
                 </section>
-                <section class="what-i-do">
+                <section id="whatido">
                 </section>
-                <section class="my-work">
+                <section id="mywork">
                 </section>
-                <section class="contact-me">
+                <section id="contactme">
                     <from>
                         <fieldset>
                             <label for="email">Email</label>
@@ -54,6 +66,7 @@
         @section('scripts')
             {{ HTML::script('assets/js/vendor/jquery.min.js') }}
             {{ HTML::script('assets/js/vendor/waypoints.min.js') }}
+            {{ HTML::script('assets/js/vendor/snap.min.js') }}
             {{ HTML::script('assets/js/app.min.js') }}
         @show
     </body>
