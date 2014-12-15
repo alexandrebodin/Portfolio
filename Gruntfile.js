@@ -61,6 +61,16 @@ module.exports = function(grunt) {
             }
         },
 
+        // Check js syntax
+        jshint: {
+            all: {
+                src: conf.webDir+conf.jsDir+'app.js',
+                options: {
+                    jshintrc: true
+                }
+            }
+        },
+
         // UglifyJS
         uglify: {
             minify: {
@@ -86,6 +96,7 @@ module.exports = function(grunt) {
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -93,7 +104,7 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('cssroutine', ['sass:css', 'newer:autoprefixer', 'newer:cssmin']);
-    grunt.registerTask('jsroutine', ['uglify']);
+    grunt.registerTask('jsroutine', ['jshint', 'uglify']);
     grunt.registerTask('default', ['cssroutine' , 'jsroutine']);
 
 };

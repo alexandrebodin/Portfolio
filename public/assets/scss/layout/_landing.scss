@@ -1,10 +1,14 @@
 .landing-home{
 
     background-image: url("../images/landing_bg.jpeg");
-    background-size: cover;
+    @media #{$medium-up} {
+        background-image: url("../images/landing_bg_big.jpeg");
+    }
 
+    background-size: cover;
     background-position: center center, center center;
-    position: fixed;
+    background-attachment: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,25 +20,44 @@
         height: 100%;
     }
 
+
     .profile-picture{
-        position: absolute;
-        top: 30%;
-        left: 20%;
+
+        width: $profile-picture-size/1.5;
+        margin: auto;
+        padding-top: 50%;
+        padding-bottom: 1rem; 
+
+        @media #{$medium-up} {
+            width: $profile-picture-size/1.5;
+            top: 30%;
+            left: 20%;
+        }
 
         .profile-img{
-            width: $profile-picture-size;
-            height: $profile-picture-size;
-            border-radius: $profile-picture-size/2;
-            border: 10px solid rgba(255, 255, 255, 0.3);
+
+            @media #{$medium-up} {
+                width: $profile-picture-size;
+                height: $profile-picture-size;
+                border-radius: $profile-picture-size;
+                border: 10px solid rgba(255, 255, 255, 0.3);
+            }
+
+            width: $profile-picture-size/1.5;
+            height: $profile-picture-size/1.5;
+            border-radius: $profile-picture-size/3;
+            border: 5px solid rgba(255, 255, 255, 0.3);
         }
     }
 
     .landing-content{
-        position: absolute;
-        top: 30%;
-        margin-top: -$h1-size;
-        left: 20%;
-        margin-left: $profile-picture-size;
+
+        text-align: center;
+
+        @media #{$medium-up} {
+            margin-top: -$h1-size;
+            margin-left: $profile-picture-size;
+        }
 
         h1{
             font-weight: 400;
@@ -43,9 +66,13 @@
         }
 
         p{
-            font-weight: 200;
-            margin-left: 2rem;
-            font-size: 1.5rem;
+            display: none;
+            @media #{$medium-up} {
+
+                font-weight: 200;
+                margin-left: 2rem;
+                font-size: 1.5rem;
+            }
         }
     }
 

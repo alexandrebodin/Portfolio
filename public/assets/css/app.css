@@ -1201,73 +1201,104 @@ header.navbar.top {
   header.navbar.top .row {
     height: 5rem;
     line-height: 5rem; }
-  header.navbar.top nav.top-nav {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    text-align: right;
-    padding-right: 3rem; }
-    header.navbar.top nav.top-nav a {
-      -webkit-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out;
-      height: 100%;
+  header.navbar.top .hamburger::before {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    content: '≡';
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 3.5rem;
+    line-height: 1.5rem; }
+  @media only screen and (min-width:40.063em) {
+    header.navbar.top .hamburger {
+      display: none; } }
+  @media only screen and (min-width:40.063em) {
+    header.navbar.top nav.top-nav {
       position: relative;
-      text-transform: uppercase;
-      margin-left: 3rem;
-      margin-top: 1rem;
-      display: inline-block; }
-      header.navbar.top nav.top-nav a .nav-link {
-        position: relative;
-        margin-top: 2rem; }
-      header.navbar.top nav.top-nav a svg {
-        position: absolute;
-        left: 50%;
-        top: 0.5rem;
-        margin-left: -12px;
-        width: 25.5px;
-        height: 20px;
-        fill: rgba(255, 255, 255, 0.4); }
-      header.navbar.top nav.top-nav a.active svg {
-        fill: white; }
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+      padding-right: 3rem; } }
+  header.navbar.top nav.top-nav a {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    position: relative;
+    text-transform: uppercase;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    display: inline-block; }
+    header.navbar.top nav.top-nav a .nav-link {
+      position: relative;
+      margin-top: 2rem; }
+    header.navbar.top nav.top-nav a svg {
+      position: absolute;
+      left: 50%;
+      top: 0.5rem;
+      margin-left: -12px;
+      width: 25.5px;
+      height: 20px;
+      fill: rgba(255, 255, 255, 0.4); }
+    header.navbar.top nav.top-nav a.active svg {
+      fill: white; }
 
 .landing-home {
   background-image: url("../images/landing_bg.jpeg");
   -webkit-background-size: cover cover;
   background-size: cover;
   background-position: center center, center center;
-  position: fixed;
+  background-attachment: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: -1; }
+  @media only screen and (min-width:40.063em) {
+    .landing-home {
+      background-image: url("../images/landing_bg_big.jpeg"); } }
   .landing-home .landing-overlay {
     background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.2) 0%, rgba(46, 49, 146, 0.4) 100%);
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.2) 0%, rgba(46, 49, 146, 0.4) 100%);
     width: 100%;
     height: 100%; }
   .landing-home .profile-picture {
-    position: absolute;
-    top: 30%;
-    left: 20%; }
+    width: 10.6666666667rem;
+    margin: auto;
+    padding-top: 50%;
+    padding-bottom: 1rem; }
+    @media only screen and (min-width:40.063em) {
+      .landing-home .profile-picture {
+        width: 10.6666666667rem;
+        top: 30%;
+        left: 20%; } }
     .landing-home .profile-picture .profile-img {
-      width: 16rem;
-      height: 16rem;
-      border-radius: 8rem;
-      border: 10px solid rgba(255, 255, 255, 0.3); }
+      width: 10.6666666667rem;
+      height: 10.6666666667rem;
+      border-radius: 5.3333333333rem;
+      border: 5px solid rgba(255, 255, 255, 0.3); }
+      @media only screen and (min-width:40.063em) {
+        .landing-home .profile-picture .profile-img {
+          width: 16rem;
+          height: 16rem;
+          border-radius: 16rem;
+          border: 10px solid rgba(255, 255, 255, 0.3); } }
   .landing-home .landing-content {
-    position: absolute;
-    top: 30%;
-    margin-top: -2rem;
-    left: 20%;
-    margin-left: 16rem; }
+    text-align: center; }
+    @media only screen and (min-width:40.063em) {
+      .landing-home .landing-content {
+        margin-top: -2rem;
+        margin-left: 16rem; } }
     .landing-home .landing-content h1 {
       font-weight: 400;
       margin: 0;
       font-size: 2rem; }
     .landing-home .landing-content p {
-      font-weight: 200;
-      margin-left: 2rem;
-      font-size: 1.5rem; }
+      display: none; }
+      @media only screen and (min-width:40.063em) {
+        .landing-home .landing-content p {
+          font-weight: 200;
+          margin-left: 2rem;
+          font-size: 1.5rem; } }
   .landing-home .landing-arrows {
     position: absolute;
     margin-left: -11px;
