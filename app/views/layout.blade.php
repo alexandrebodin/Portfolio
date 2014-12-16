@@ -40,6 +40,9 @@
                         </header>
                         <section class="content">
                             <div class="large-6 small-12 columns left">
+                                <p>
+                                    {{ trans('messages.text.whoiam') }}
+                                </p>
                             </div>
                             <div class="large-6 small-12 columns right">
                             </div>

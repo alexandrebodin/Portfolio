@@ -30,9 +30,11 @@
     section.content{
         margin-top: 2rem;
         .left{
-            background-color: rgba(0,0,0,0.05);
-            height: 15rem;
-            padding: 2rem;
+            p {
+                background-color: rgba(0,0,0,0.05);
+                height: 15rem;
+            }
+            padding: 10px;
         }
     }
 }

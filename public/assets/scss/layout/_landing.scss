@@ -30,8 +30,15 @@
 
         @media #{$medium-up} {
             width: $profile-picture-size;
+            padding-top: 30%;
+        }
+
+        @media #{$large-up} {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            left: 15%;
             top: 30%;
-            left: 20%;
         }
 
         .profile-img{
@@ -54,8 +61,11 @@
 
         text-align: center;
 
-        @media #{$medium-up} {
-            margin-top: -$h1-size;
+        @media #{$large-up} {
+            position: absolute;
+            text-align: left;
+            top: 30%;
+            left: 15%;
             margin-left: $profile-picture-size;
         }
 
@@ -66,15 +76,19 @@
         }
 
         .landing-message {
-          display: none;  
+            display: none;  
+            @media #{$medium-up} {
+                display: block;
+            }
         }
 
         p{
-            @media #{$medium-up} {
+            font-weight: 200;
+            font-size: 1.5rem;
 
-                font-weight: 200;
+            @media #{$medium-up} {
                 margin-left: 2rem;
-                font-size: 1.5rem;
+                margin-right: 2rem;
             }
         }
     }

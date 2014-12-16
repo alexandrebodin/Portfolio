@@ -20,11 +20,13 @@ header.navbar.top {
 
     &.background-on{
 
-        background-color: $light-purple;
-        height: $nav-height + 0.5rem;
-        box-shadow: rgba(0,0,0,.1) 0px 5px 2px;
-        nav.top-nav a{
-            margin-top: 1.5rem;
+        @media #{$medium-up} {
+            background-color: $light-purple;
+            height: $nav-height + 0.5rem;
+            box-shadow: rgba(0,0,0,.1) 0px 5px 2px;
+            nav.top-nav a{
+                margin-top: 0.5rem;
+            }
         }
     }
 
@@ -32,7 +34,9 @@ header.navbar.top {
         height: $nav-height;
 
         @media #{$medium-up} {
-            line-height: $nav-height;
+            text-align: right;
+            line-height: 3rem;
+            padding-right: 3rem;
         }
     }
 
@@ -62,6 +66,11 @@ header.navbar.top {
                 position: relative;
                 display: inline-block;
                 vertical-align: -3px;
+
+                @media #{$medium-up} {
+                    display: block;
+                    vertical-align: 0;
+                }
             }
 
             svg{
@@ -70,6 +79,13 @@ header.navbar.top {
                 margin: 0 2rem;
                 height: 25px;
                 fill: rgba(255, 255, 255, 0.4);
+
+                @media #{$medium-up} {
+                    height: 20px;
+                    margin:auto;
+                    display: block;
+                    vertical-align: 0;
+                }
             }
 
             &.active svg{

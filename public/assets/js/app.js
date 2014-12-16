@@ -76,7 +76,7 @@ var portfolio_ab = (function () {
 
         function waypoints() {
             $('.main-content').waypoint(function(){
-                //$('.navbar.top').toggleClass('background-on');
+                $('.navbar.top').toggleClass('background-on');
                 $('.hamburger').toggleClass('dark');
             }, {offset : conf.navHeight} );
         }

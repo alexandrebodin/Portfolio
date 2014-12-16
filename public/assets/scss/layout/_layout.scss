@@ -26,6 +26,10 @@
 body.menu-open{
     .wrapper, .hamburger {
         transform: translateX($side-menu-width);
+
+        @media #{$medium-up} {
+            transform: translateX(0);
+        }
     }
 
 
