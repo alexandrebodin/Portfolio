@@ -10,4 +10,5 @@ node_modules
 public/assets/images
 public/assets/scss/vendor/
 public/assets/css/
+public/assets/js/*.min.js
 features/
