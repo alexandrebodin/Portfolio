@@ -1,14 +1,25 @@
 header.navbar.top {
-    z-index: 10;
-    transition: all 0.3s ease-in-out;
-    height: $nav-height;
+
     position: fixed;
-    top: 0;
-    width: 100%;
+    top:0;
+    left: 0;
+    width: $side-menu-width;
+    height: 100%;
+    z-index:0;
+    background-color: $dark_blue;
+
+    @media #{$medium-up} {
+        z-index: 10;
+        transition: all 0.3s ease-in-out;
+        height: $nav-height;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
     &.background-on{
 
-        background-color: #726A98;
+        background-color: $light-purple;
         height: $nav-height + 0.5rem;
         box-shadow: rgba(0,0,0,.1) 0px 5px 2px;
         nav.top-nav a{
@@ -21,42 +32,17 @@ header.navbar.top {
         line-height: $nav-height;
     }
 
-    .hamburger {
-
-        &::before {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            content: '≡';
-            color: rgba(white, 0.4);
-            font-size: 3.5rem;
-            line-height: 1.5rem;
-        }
-
-        @media #{$medium-up} {
-            display: none;
-        }
-    }
-
-
     nav.top-nav{
 
-        @media #{$medium-up} {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            text-align: right;
-            padding-right: 3rem;
-        }
+        position: relative;
+        width: 100%;
 
         a{
             transition: all 0.5s ease-in-out;
             height: 100%;
             position: relative;
             text-transform: uppercase;
-            margin-left: 3rem;
-            margin-top: 1rem;
-            display: inline-block;
+            display: block;
 
             .nav-link{
                 position: relative;
@@ -64,12 +50,6 @@ header.navbar.top {
             }
 
             svg{
-
-                position: absolute;
-                left: 50%;
-                top: 0.5rem;
-                margin-left: -12px;
-                width: 25.5px;
                 height: 20px;
                 fill: rgba(255, 255, 255, 0.4);
             }
@@ -78,5 +58,25 @@ header.navbar.top {
                 fill: white;
             }
         }
+    }
+}
+
+.hamburger {
+
+    position: absolute;
+    z-index: 10;
+
+    &::before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        content: '≡';
+        color: rgba(white, 0.4);
+        font-size: 3.5rem;
+        line-height: 1.5rem;
+    }
+
+    @media #{$medium-up} {
+        display: none;
     }
 }

@@ -3,7 +3,14 @@
 @import "whoiam";
 
 .wrapper{
+
+    z-index: 1;
     position: relative;
+    background-color: white;
+
+    &.animate {
+        transition: 0.5s all ease-in-out;
+    }
 
     .main-content{
         position: relative;
@@ -16,3 +23,8 @@
     }
 }
 
+body.menu-open{
+    .wrapper {
+        transform: translateX($side-menu-width);
+    }
+}

@@ -42,6 +42,7 @@ module.exports = function(grunt) {
                     ext: '.css'
                 }],
                 options: {
+                    sourceMap: true,
                     includePaths: [
                         conf.webDir+conf.scssDir
                     ]

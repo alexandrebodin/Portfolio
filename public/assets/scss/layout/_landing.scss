@@ -15,7 +15,7 @@
     z-index: -1;
 
     .landing-overlay{
-        background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%,rgba(46, 49, 146, 0.4) 100%);
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.4) 0%,rgba(46, 49, 146, 0.4) 100%);
         width: 100%;
         height: 100%;
     }
@@ -65,8 +65,11 @@
             font-size: $h1-size;
         }
 
+        .landing-message {
+          display: none;  
+        }
+
         p{
-            display: none;
             @media #{$medium-up} {
 
                 font-weight: 200;

@@ -4,12 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Alexandre BODIN</title>
-        {{ HTML::style('assets/css/app.min.css') }}
+        {{ HTML::style('assets/css/app.css') }}
     </head>
     <body>
         @include('svg-icons-portfolio')
         @include('header')
         <section class="wrapper">
+            <div href="#menu" class="hamburger">
+            </div>
             <section class="landing-home">
             <div class="landing-overlay">
                 <div class="profile-picture">
@@ -19,8 +21,8 @@
                 </div>
                 <div class="landing-content">
                     <h1>Alexandre BODIN</h1>
-                    <p>{{ trans('messages.profesionnal-status') }}</p>
-                    <p>{{ trans('messages.landing-message') }}</p>
+                    <p class="pro-status">{{ trans('messages.profesionnal-status') }}</p>
+                    <p class="landing-message">{{ trans('messages.landing-message') }}</p>
                 </div>
             </div>
             <div class="landing-arrows">

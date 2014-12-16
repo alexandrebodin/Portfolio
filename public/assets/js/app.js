@@ -31,7 +31,12 @@ var portfolio_ab = (function () {
     }
 
     function scrollToWithSelector(selector) {
-        var scroll = $(selector).offset().top - conf.navHeight;
+
+        var scroll = $(selector).offset().top;
+        if(window.matchMedia(mediaQueries.mediumUp).matches) {
+            scroll = $(selector).offset().top - conf.navHeight;
+        }
+        
         $('html, body').animate({ scrollTop: scroll }, 'slow');
     }
 
@@ -39,9 +44,7 @@ var portfolio_ab = (function () {
 
         function resizeLanding() {
             var windowHeight = $(window).height();
-            $('.landing, .main-content').attr('style', '');
             $('.landing-home').css('height', windowHeight);
-            $('.main-content').css('margin-top', windowHeight);            
         }
 
         function resize() {
@@ -80,8 +83,24 @@ var portfolio_ab = (function () {
         function bind() {
             $('.navbar a').click(function(e){
                 e.preventDefault();
+                $('.wrapper').removeClass('animate');
+                $('body').removeClass('menu-open');
                 var id = $(this).attr('href');
                 scrollToWithSelector(id);
+            });
+
+            $('.hamburger').click(function(e){
+                e.preventDefault();
+                $('.wrapper').removeClass('animate');
+                $('.wrapper').addClass('animate');
+
+                if($('body').hasClass('menu-open'))
+                {
+                    $('body').removeClass('menu-open');
+                } else {
+                    $('body').addClass('menu-open');
+                }
+
             });
         }
 

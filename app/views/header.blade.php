@@ -1,7 +1,5 @@
 <header class="navbar top">
     <div class="row">
-        <div href="#menu" class="hamburger">
-        </div>
         <nav class="top-nav">
             <a href="#whoiam">
                 {{ HTML::navSvgIcon('who-i-am')}}
