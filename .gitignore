@@ -9,4 +9,5 @@ Thumbs.db
 node_modules
 public/assets/images
 public/assets/scss/vendor/
+public/assets/css/
 features/
