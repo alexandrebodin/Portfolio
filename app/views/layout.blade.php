@@ -9,10 +9,10 @@
     <body>
         @include('svg-icons-portfolio')
         @include('header')
+        <div href="#menu" class="hamburger">
+        </div>
         <section class="wrapper">
-            <div href="#menu" class="hamburger">
-            </div>
-            <section class="landing-home">
+            <section id="landing" class="landing-home">
             <div class="landing-overlay">
                 <div class="profile-picture">
                     <a class="profile-picture-link">

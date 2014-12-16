@@ -24,7 +24,9 @@
 }
 
 body.menu-open{
-    .wrapper {
+    .wrapper, .hamburger {
         transform: translateX($side-menu-width);
     }
+
+
 }

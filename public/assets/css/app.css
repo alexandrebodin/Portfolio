@@ -1193,6 +1193,7 @@ header.navbar.top {
   background-color: #48487E; }
   @media only screen and (min-width:40.063em) {
     header.navbar.top {
+      background-color: transparent;
       z-index: 10;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
@@ -1208,30 +1209,47 @@ header.navbar.top {
     header.navbar.top.background-on nav.top-nav a {
       margin-top: 1.5rem; }
   header.navbar.top .row {
-    height: 5rem;
-    line-height: 5rem; }
+    height: 5rem; }
+    @media only screen and (min-width:40.063em) {
+      header.navbar.top .row {
+        line-height: 5rem; } }
   header.navbar.top nav.top-nav {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    padding-top: 3rem; }
+    @media only screen and (min-width:40.063em) {
+      header.navbar.top nav.top-nav {
+        padding: 0; } }
     header.navbar.top nav.top-nav a {
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out;
-      height: 100%;
       position: relative;
       text-transform: uppercase;
-      display: block; }
+      display: block;
+      text-align: left;
+      padding: 1rem; }
+      @media only screen and (min-width:40.063em) {
+        header.navbar.top nav.top-nav a {
+          display: inline-block; } }
       header.navbar.top nav.top-nav a .nav-link {
         position: relative;
-        margin-top: 2rem; }
+        display: inline-block;
+        vertical-align: -3px; }
       header.navbar.top nav.top-nav a svg {
-        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 2rem;
+        height: 25px;
         fill: rgba(255, 255, 255, 0.4); }
       header.navbar.top nav.top-nav a.active svg {
         fill: white; }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   z-index: 10; }
+  .hamburger.animate {
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out; }
   .hamburger::before {
     position: absolute;
     top: 10px;
@@ -1243,6 +1261,9 @@ header.navbar.top {
   @media only screen and (min-width:40.063em) {
     .hamburger {
       display: none; } }
+
+.hamburger.dark::before {
+  color: rgba(0, 0, 0, 0.4); }
 
 .landing-home {
   background-image: url("../images/landing_bg.jpeg");
@@ -1270,7 +1291,7 @@ header.navbar.top {
     padding-bottom: 1rem; }
     @media only screen and (min-width:40.063em) {
       .landing-home .profile-picture {
-        width: 10.6666666667rem;
+        width: 16rem;
         top: 30%;
         left: 20%; } }
     .landing-home .profile-picture .profile-img {
@@ -1355,7 +1376,7 @@ header.navbar.top {
       background-color: white;
       min-height: 20rem; }
 
-body.menu-open .wrapper {
+body.menu-open .wrapper, body.menu-open .hamburger {
   -webkit-transform: translateX(275px);
   -ms-transform: translateX(275px);
   transform: translateX(275px); }

@@ -76,7 +76,8 @@ var portfolio_ab = (function () {
 
         function waypoints() {
             $('.main-content').waypoint(function(){
-                $('.navbar.top').toggleClass('background-on');
+                //$('.navbar.top').toggleClass('background-on');
+                $('.hamburger').toggleClass('dark');
             }, {offset : conf.navHeight} );
         }
 
@@ -84,6 +85,7 @@ var portfolio_ab = (function () {
             $('.navbar a').click(function(e){
                 e.preventDefault();
                 $('.wrapper').removeClass('animate');
+                $('.hamburger').removeClass('animate');
                 $('body').removeClass('menu-open');
                 var id = $(this).attr('href');
                 scrollToWithSelector(id);
@@ -93,6 +95,8 @@ var portfolio_ab = (function () {
                 e.preventDefault();
                 $('.wrapper').removeClass('animate');
                 $('.wrapper').addClass('animate');
+                $('.hamburger').removeClass('animate');
+                $('.hamburger').addClass('animate');
 
                 if($('body').hasClass('menu-open'))
                 {

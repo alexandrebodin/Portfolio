@@ -29,7 +29,7 @@
         padding-bottom: 1rem; 
 
         @media #{$medium-up} {
-            width: $profile-picture-size/1.5;
+            width: $profile-picture-size;
             top: 30%;
             left: 20%;
         }

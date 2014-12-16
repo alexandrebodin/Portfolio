@@ -9,6 +9,7 @@ header.navbar.top {
     background-color: $dark_blue;
 
     @media #{$medium-up} {
+        background-color: transparent;
         z-index: 10;
         transition: all 0.3s ease-in-out;
         height: $nav-height;
@@ -29,28 +30,45 @@ header.navbar.top {
 
     .row{
         height: $nav-height;
-        line-height: $nav-height;
+
+        @media #{$medium-up} {
+            line-height: $nav-height;
+        }
     }
 
     nav.top-nav{
 
         position: relative;
         width: 100%;
+        padding-top: 3rem;
+
+        @media #{$medium-up} {
+            padding: 0;
+        }
 
         a{
             transition: all 0.5s ease-in-out;
-            height: 100%;
             position: relative;
             text-transform: uppercase;
             display: block;
+            text-align: left;
+            padding: 1rem;
+
+            @media #{$medium-up} {
+                display: inline-block;
+            }
 
             .nav-link{
                 position: relative;
-                margin-top: 2rem;
+                display: inline-block;
+                vertical-align: -3px;
             }
 
             svg{
-                height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 2rem;
+                height: 25px;
                 fill: rgba(255, 255, 255, 0.4);
             }
 
@@ -63,8 +81,12 @@ header.navbar.top {
 
 .hamburger {
 
-    position: absolute;
+    position: fixed;
     z-index: 10;
+
+    &.animate {
+        transition: 0.5s all ease-in-out;
+    }
 
     &::before {
         position: absolute;
@@ -78,5 +100,11 @@ header.navbar.top {
 
     @media #{$medium-up} {
         display: none;
+    }
+}
+
+.hamburger.dark {
+    &::before {
+        color: rgba(black, 0.4);
     }
 }
