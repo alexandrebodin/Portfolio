@@ -103,6 +103,9 @@ var portfolio_ab = (function () {
                     $('body').removeClass('menu-open');
                 } else {
                     $('body').addClass('menu-open');
+                    $('.wrapper').one('click', function(){
+                        $('body').removeClass('menu-open');
+                    });
                 }
 
             });
