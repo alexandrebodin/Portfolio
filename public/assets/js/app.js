@@ -5,7 +5,7 @@ var portfolio_ab = (function () {
     'use strict';
 
     var conf = {
-        navHeight: '80',
+        navHeight: 0,
         svgDir: '/assets/svg/'
     };
 
@@ -44,6 +44,11 @@ var portfolio_ab = (function () {
 
         function resizeLanding() {
             var windowHeight = $(window).height();
+            if(window.matchMedia(mediaQueries.mediumUp).matches) {
+                conf.navHeight = 80;
+            } else {
+                conf.navHeight = 0;
+            }
             $('.landing-home').css('height', windowHeight);
         }
 
@@ -78,6 +83,9 @@ var portfolio_ab = (function () {
             $('.main-content').waypoint(function(){
                 $('.navbar.top').toggleClass('background-on');
                 $('.hamburger').toggleClass('dark');
+
+                console.log(conf.navHeight);
+
             }, {offset : conf.navHeight} );
         }
 
@@ -137,6 +145,16 @@ var portfolio_ab = (function () {
     var sections = [landing, nav, whoIAm];
 
     function init() {
+
+        //setup some conf
+        if(window.matchMedia(mediaQueries.mediumUp).matches) {
+            conf.navHeight = 80;
+        } else {
+            conf.navHeight = 0;
+        }
+        console.log(conf);
+
+        //init sections
         var i;
         for (i = 0; i < sections.length; i++) {
             sections[i].init();
