@@ -74,7 +74,7 @@
             {{ HTML::script('assets/js/vendor/jquery.min.js') }}
             {{ HTML::script('assets/js/vendor/waypoints.min.js') }}
             {{ HTML::script('assets/js/vendor/snap.min.js') }}
-            {{ HTML::script('assets/js/app.min.js') }}
+            {{ HTML::script('assets/js/app.js') }}
         @show
     </body>
 </html>

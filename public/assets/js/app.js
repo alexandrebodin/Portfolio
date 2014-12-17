@@ -42,19 +42,12 @@ var portfolio_ab = (function () {
 
     var landing = (function () {
 
-        function resizeLanding() {
-            var windowHeight = $(window).height();
-            if(window.matchMedia(mediaQueries.mediumUp).matches) {
-                conf.navHeight = 80;
-            } else {
-                conf.navHeight = 0;
-            }
-            $('.landing-home').css('height', windowHeight);
+        function resizeLanding(height) {
+            $('.landing-home').css('height', height);
         }
 
-        function resize() {
-            resizeLanding();
-            $(window).resize(resizeLanding);
+        function resize(height, width) {
+            resizeLanding(height);
         }
 
         function scrollLanding() {
@@ -72,7 +65,8 @@ var portfolio_ab = (function () {
         }
 
         return {
-            init: initFunction
+            init: initFunction,
+            resize: resize
         };
 
     }());
@@ -83,9 +77,6 @@ var portfolio_ab = (function () {
             $('.main-content').waypoint(function(){
                 $('.navbar.top').toggleClass('background-on');
                 $('.hamburger').toggleClass('dark');
-
-                console.log(conf.navHeight);
-
             }, {offset : conf.navHeight} );
         }
 
@@ -152,12 +143,36 @@ var portfolio_ab = (function () {
         } else {
             conf.navHeight = 0;
         }
-        console.log(conf);
 
         //init sections
         var i;
         for (i = 0; i < sections.length; i++) {
             sections[i].init();
+        }
+
+        bind();
+        resize();
+    }
+
+    function bind() {
+        $(window).resize(resize);
+    }
+
+    function resize() {
+
+        if(window.matchMedia(mediaQueries.mediumUp).matches) {
+            conf.navHeight = 80;
+        } else {
+            conf.navHeight = 0;
+        }
+
+        var i;
+        var height = $(window).height();
+        var width = $(window).width();
+        for (i = 0; i < sections.length; i++) {
+            if(sections[i].hasOwnProperty('resize')) {
+                sections[i].resize(height, width);
+            }
         }
     }
 
