@@ -39,13 +39,26 @@
                             <h2>{{ trans('messages.whoiam') }}</h2>
                         </header>
                         <section class="content">
-                            <div class="large-6 small-12 columns left">
+                            <div class="small-12 columns">
+                                <h3 class="text-center">{{ trans('messages.sections.whoiam.center_top.title') }}</h3>
                                 <p>
-                                    {{ trans('messages.text.whoiam') }}
+                                    {{ trans('messages.sections.whoiam.center_top.text0') }}
+                                </p>
+                                <p>
+                                    {{ trans('messages.sections.whoiam.center_top.text1') }}
                                 </p>
                             </div>
-                            <div class="large-6 small-12 columns right">
-
+                            <div class="large-6 small-12 columns">
+                                <h3>{{ trans('messages.sections.whoiam.left.title') }}</h3>
+                                <p>
+                                    {{ trans('messages.sections.whoiam.left.text') }}
+                                </p>
+                            </div>
+                            <div class="large-6 small-12 columns">
+                                <h3>{{ trans('messages.sections.whoiam.right.title') }}</h3>
+                                <p>
+                                    {{ trans('messages.sections.whoiam.right.text') }}
+                                </p>
                             </div>
                         </section>
                     </div>
@@ -74,7 +87,7 @@
             {{ HTML::script('assets/js/vendor/jquery.min.js') }}
             {{ HTML::script('assets/js/vendor/waypoints.min.js') }}
             {{ HTML::script('assets/js/vendor/snap.min.js') }}
-            {{ HTML::script('assets/js/app.min.js') }}
+            {{ HTML::script('assets/js/app.js') }}
         @show
     </body>
 </html>

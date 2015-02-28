@@ -5,7 +5,8 @@
 @charset "UTF-8";
 
 // Behold, here are all the Foundation components.
-@import "foundation/components/grid";
+@import "foundation/components/grid",
+        "foundation/components/type";
   // "foundation/components/accordion",
   // "foundation/components/alert-boxes",
   // "foundation/components/block-grid",
@@ -39,7 +40,6 @@
   // "foundation/components/thumbs",
   // "foundation/components/tooltips",
   // "foundation/components/top-bar",
-  // "foundation/components/type"
   // "foundation/components/offcanvas",
   // "foundation/components/visibility"
 

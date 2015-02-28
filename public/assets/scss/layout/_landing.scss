@@ -7,7 +7,11 @@
 
     background-size: cover;
     background-position: center center, center center;
-    background-attachment: fixed;
+
+    @media #{$medium-up} {
+        background-attachment: fixed;
+    }
+
     position: relative;
     top: 0;
     left: 0;
@@ -26,7 +30,7 @@
         width: $profile-picture-size/1.5;
         margin: auto;
         padding-top: 50%;
-        padding-bottom: 1rem; 
+        padding-bottom: 1rem;
 
         @media #{$medium-up} {
             width: $profile-picture-size;
@@ -73,10 +77,11 @@
             font-weight: 400;
             margin: 0;
             font-size: $h1-size;
+            color: white;
         }
 
         .landing-message {
-            display: none;  
+            display: none;
             @media #{$medium-up} {
                 display: block;
             }

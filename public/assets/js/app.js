@@ -5,7 +5,7 @@ var portfolio_ab = (function () {
     'use strict';
 
     var conf = {
-        navHeight: '80',
+        navHeight: 0,
         svgDir: '/assets/svg/'
     };
 
@@ -17,7 +17,7 @@ var portfolio_ab = (function () {
         largeUp: mediaQueries.screen + ' and (min-width:64.063em)',
         xlargeUp: mediaQueries.screen + ' and (min-width:90.063em)',
         xxlargeUp: mediaQueries.screen + ' and (min-width:120.063em)'
-    };    
+    };
 
     function loadSvg(id) {
         var svgSelector = '#' + id + ' .svg-header' ;
@@ -36,20 +36,18 @@ var portfolio_ab = (function () {
         if(window.matchMedia(mediaQueries.mediumUp).matches) {
             scroll = $(selector).offset().top - conf.navHeight;
         }
-        
+
         $('html, body').animate({ scrollTop: scroll }, 'slow');
     }
 
     var landing = (function () {
 
-        function resizeLanding() {
-            var windowHeight = $(window).height();
-            $('.landing-home').css('height', windowHeight);
+        function resizeLanding(height) {
+            $('.landing-home').css('height', height);
         }
 
-        function resize() {
-            resizeLanding();
-            $(window).resize(resizeLanding);
+        function resize(height, width) {
+            resizeLanding(height);
         }
 
         function scrollLanding() {
@@ -67,7 +65,8 @@ var portfolio_ab = (function () {
         }
 
         return {
-            init: initFunction
+            init: initFunction,
+            resize: resize
         };
 
     }());
@@ -94,8 +93,8 @@ var portfolio_ab = (function () {
             $('.hamburger').click(function(e){
                 e.preventDefault();
                 $('.wrapper').removeClass('animate');
-                $('.wrapper').addClass('animate');
                 $('.hamburger').removeClass('animate');
+                $('.wrapper').addClass('animate');
                 $('.hamburger').addClass('animate');
 
                 if($('body').hasClass('menu-open'))
@@ -137,9 +136,43 @@ var portfolio_ab = (function () {
     var sections = [landing, nav, whoIAm];
 
     function init() {
+
+        //setup some conf
+        if(window.matchMedia(mediaQueries.mediumUp).matches) {
+            conf.navHeight = 80;
+        } else {
+            conf.navHeight = 30;
+        }
+
+        //init sections
         var i;
         for (i = 0; i < sections.length; i++) {
             sections[i].init();
+        }
+
+        bind();
+        resize();
+    }
+
+    function bind() {
+        $(window).resize(resize);
+    }
+
+    function resize() {
+
+        if(window.matchMedia(mediaQueries.mediumUp).matches) {
+            conf.navHeight = 80;
+        } else {
+            conf.navHeight = 30;
+        }
+
+        var i;
+        var height = $(window).height();
+        var width = $(window).width();
+        for (i = 0; i < sections.length; i++) {
+            if(sections[i].hasOwnProperty('resize')) {
+                sections[i].resize(height, width);
+            }
         }
     }
 
